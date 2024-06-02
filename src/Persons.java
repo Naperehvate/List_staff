@@ -6,6 +6,13 @@ public class Persons
     private int age;
     private String idNumber;
 
+    public Persons(String name, int age, String idNumber)
+    {
+        this.name = name;
+        this.age = age;
+        this.idNumber = idNumber;
+    }
+
     public String getName()
     {
         return name;
@@ -31,6 +38,15 @@ public class Persons
     public int hashCode()
     {
         return Objects.hash(idNumber);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Persons" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", idNumber='" + idNumber + '\'';
     }
 
 }
