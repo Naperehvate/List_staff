@@ -1,0 +1,36 @@
+import java.util.Objects;
+
+public class Persons
+{
+    private String name;
+    private int age;
+    private String idNumber;
+
+    public String getName()
+    {
+        return name;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+    public String getIdNumber()
+    {
+        return idNumber;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Persons persons = (Persons) o;
+        return Objects.equals(idNumber, persons.idNumber);
+    }
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(idNumber);
+    }
+
+}
